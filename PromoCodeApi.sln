@@ -5,11 +5,15 @@ VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PromoCode.Api", "PromoCodeApi\PromoCode.Api.csproj", "{3D4B2304-6764-45E6-B75B-5923406BCF63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromoCode.Repository", "PromoCode.Repository\PromoCode.Repository.csproj", "{58DCE08F-9D75-472E-A9F1-CD64878F196A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PromoCode.Repository", "PromoCode.Repository\PromoCode.Repository.csproj", "{58DCE08F-9D75-472E-A9F1-CD64878F196A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromoCode.Model", "PromoCode.Model\PromoCode.Model.csproj", "{1BEA9639-D4E3-452B-BD9E-106519109914}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PromoCode.Model", "PromoCode.Model\PromoCode.Model.csproj", "{1BEA9639-D4E3-452B-BD9E-106519109914}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromoCode.Services", "PromoCode.Services\PromoCode.Services.csproj", "{35E646D5-7BA5-451A-B999-6B4E5B84E3FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PromoCode.Services", "PromoCode.Services\PromoCode.Services.csproj", "{35E646D5-7BA5-451A-B999-6B4E5B84E3FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CE00523E-8E8A-4142-AED4-2A83D5487240}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromoCode.Api.Test", "PromoCode.Api.Test\PromoCode.Api.Test.csproj", "{367496AB-E290-477E-AD89-F469208B7658}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +37,16 @@ Global
 		{35E646D5-7BA5-451A-B999-6B4E5B84E3FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35E646D5-7BA5-451A-B999-6B4E5B84E3FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35E646D5-7BA5-451A-B999-6B4E5B84E3FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{367496AB-E290-477E-AD89-F469208B7658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{367496AB-E290-477E-AD89-F469208B7658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{367496AB-E290-477E-AD89-F469208B7658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{367496AB-E290-477E-AD89-F469208B7658}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{367496AB-E290-477E-AD89-F469208B7658} = {CE00523E-8E8A-4142-AED4-2A83D5487240}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BBAB7C14-CA0E-49CB-BEBB-4CD2921024A5}
