@@ -6,8 +6,8 @@ The following are the steps for running the project locally. You will require Vi
 3. Open appsettings.json file in Promocode.Api project. 
 4. Edit the ConnectionStrings by replacing the values for Server, User ID and Password.
 5. Under Tools, open Package Manager Console and run the following commands. Please Ensure the selected Default project is: PromoCode.Repository
-  i)  add-migration Promocode_Release
-  ii) update-database
+  1. add-migration Promocode_Release
+  2. update-database
   
 7. Run the project. It will open with swagger documentation on port 4000 http://localhost:4000/swagger/index.html
 
