@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace PromoCode.Api.Controllers
 {
-    [AllowAnonymous]
+    [Authorize]
     [Route("api/v1/[controller]")]
     [ApiController]
     public class PromoCodeController : ControllerBase
@@ -23,7 +23,7 @@ namespace PromoCode.Api.Controllers
             _promoCodeService = promoCodeService;
         }
         [HttpGet("GetPromoCodes")]
-        public Task<ApiResponse> GetPromoCodes()
+        public Task<ApiResponse> GetPromoCodes(string query, int pageNumber)
         {
             try
             {

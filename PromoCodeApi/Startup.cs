@@ -34,7 +34,16 @@ namespace PromoCodeApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddCors();
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                        .AllowAnyHeader();
+                    });
+            });
+
             //services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
             services.AddDbContext<PromoCodeDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("PromoCodeContext")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
@@ -104,6 +113,7 @@ namespace PromoCodeApi
             }
 
             app.UseRouting();
+            app.UseCors();
             app.UseAuthentication();
             app.UseAuthorization();
 
