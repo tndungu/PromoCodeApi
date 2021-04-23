@@ -37,7 +37,7 @@ namespace PromoCode.Api.Test
             var result = await PromoCodeController.GetPromoCodes();
 
             Assert.IsNotNull(result);
-            Assert.AreEqual(200, result.HttpResponseCode);
+            Assert.AreEqual(HttpStatusCode.OK, result.HttpResponseCode);
         }
     }
 }

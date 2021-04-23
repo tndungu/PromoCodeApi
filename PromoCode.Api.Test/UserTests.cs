@@ -45,7 +45,7 @@ namespace PromoCode.Api.Test
             var result = await UserController.Authenticate(new UserRequest { Email = "antony@gmail.com", Password = "Password1" });
 
             Assert.IsNotNull(result);
-            Assert.AreEqual(200, result.HttpResponseCode);
+            Assert.AreEqual(HttpStatusCode.OK, result.HttpResponseCode);
         }
     }
 }
