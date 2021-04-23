@@ -15,5 +15,9 @@
     <ProjectReference Include="..\PromoCode.Services\PromoCode.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
 
 </Project>
