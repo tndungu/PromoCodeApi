@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace PromoCode.Api.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     [Route("api/v1/[controller]")]
     [ApiController]
     public class PromoCodeController : ControllerBase
