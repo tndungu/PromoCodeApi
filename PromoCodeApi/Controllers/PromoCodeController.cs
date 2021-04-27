@@ -27,7 +27,7 @@ namespace PromoCode.Api.Controllers
         {
             try
             {
-                return _promoCodeService.GetPromoCodesAsync();
+                return _promoCodeService.GetPromoCodesAsync(query, pageNumber);
             }
             catch (Exception ex)
             {

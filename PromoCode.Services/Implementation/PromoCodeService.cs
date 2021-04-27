@@ -25,11 +25,13 @@ namespace PromoCode.Services.Implementation
             _context = context;
             _appSettings = appSettings.Value;
         }
-        public async Task<ApiResponse> GetPromoCodesAsync()
+        public async Task<ApiResponse> GetPromoCodesAsync(string query, int pageNumber)
         {
+            if (query == null) query = "";
             var promos =  (from ba in _context.BonusActivated
                           join pp in _context.PromoCodeProduct on ba.ProductId equals pp.ProductId
                           join pcl in _context.PromoCodeList on ba.PromoCodeListId equals pcl.Id
+                          where pp.ProductDescription.Contains(query)
 
                           select new PromoCodeResponse
                           {

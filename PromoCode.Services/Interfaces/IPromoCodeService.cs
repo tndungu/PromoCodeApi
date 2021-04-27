@@ -9,7 +9,7 @@ namespace PromoCode.Services.Interfaces
 {
     public interface IPromoCodeService
     {
-        Task<ApiResponse> GetPromoCodesAsync();
+        Task<ApiResponse> GetPromoCodesAsync(string query, int pageNumber);
         Task<ApiResponse> ActivateBonusAsync(ActivateBonusRequest model);
     }
 }
